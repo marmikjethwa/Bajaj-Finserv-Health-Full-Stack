@@ -37,10 +37,16 @@ app.post('/bfhl', (req, res) => {
                 } else {
                     oddNumbers.push(item);
                 }
-            } else if (typeof item === 'string' && /^[a-zA-Z]$/.test(item)) {
+            } 
+            // This block is now corrected
+            else if (typeof item === 'string' && /^[a-zA-Z]+$/.test(item)) {
                 alphabets.push(item.toUpperCase());
-                alphabetChars.push(item);
-            } else {
+                // Loop through the string and add each character for concatenation
+                for (const char of item) {
+                    alphabetChars.push(char);
+                }
+            } 
+            else {
                 specialCharacters.push(item);
             }
         }
