@@ -26,7 +26,7 @@ Method: POST
 
 URL: /bfhl
 
-Live URL: https://your-hosted-api-url.com/bfhl (Replace with your deployed URL)
+Live URL: https://bajaj-finserv-health-full-stack-lilac.vercel.app/bfhl 
 
 Request Body
 The API expects a JSON object with a single key, data, which holds an array of strings.
