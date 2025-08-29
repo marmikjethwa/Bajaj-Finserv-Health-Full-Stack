@@ -1,8 +1,11 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
+
+app.use(express.static(__dirname));
 
 app.post('/bfhl', (req, res) => {
     try {
@@ -38,10 +41,8 @@ app.post('/bfhl', (req, res) => {
                     oddNumbers.push(item);
                 }
             } 
-            // This block is now corrected
             else if (typeof item === 'string' && /^[a-zA-Z]+$/.test(item)) {
                 alphabets.push(item.toUpperCase());
-                // Loop through the string and add each character for concatenation
                 for (const char of item) {
                     alphabetChars.push(char);
                 }
