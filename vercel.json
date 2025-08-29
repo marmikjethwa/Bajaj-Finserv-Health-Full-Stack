@@ -12,7 +12,7 @@
       "dest": "/index.html"
     },
     {
-      "src": "/(.*)",
+      "src": "/bfhl",
       "dest": "index.js"
     }
   ]
